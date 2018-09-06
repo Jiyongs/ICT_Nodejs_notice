@@ -1,3 +1,23 @@
+/* public/css/master.css */
+
+/* global 스타일 */
+.buttons form{
+  display: inline-block;
+ }
+
+/* home 스타일 */
 .home h1{
     color:  rgb(4, 20, 63);
   }
+
+  /* post 스타일 */
+  .post h2 {
+    color: tomato;
+    text-align: center;
+   }
+   .post .post-body{
+    white-space: pre-line; /* 1 */
+   }
+   .post .posts .date{
+    width: 100px;
+   }

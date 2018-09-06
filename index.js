@@ -1,3 +1,5 @@
+/* /index.js */
+
 var express        = require("express");
 var mongoose       = require("mongoose");
 var bodyParser     = require("body-parser");
@@ -22,7 +24,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 
 // Routes
-app.use("/", require("./routes/home"));
+app.use("/", require("./routes/home"));        //메인 화면 띄우기 라우터
+app.use("/posts", require("./routes/posts"));  //게시물 CRUD 관련 라우터
 
 // Port setting
 var port = 3000
