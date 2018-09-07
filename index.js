@@ -26,6 +26,7 @@ app.use(methodOverride("_method"));
 // Routes
 app.use("/", require("./routes/home"));        //메인 화면 띄우기 라우터
 app.use("/posts", require("./routes/posts"));  //게시물 CRUD 관련 라우터
+app.use("/users", require("./routes/users"));  //회원가입 라우터
 
 // Port setting
 var port = 3000

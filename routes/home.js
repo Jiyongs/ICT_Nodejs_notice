@@ -1,4 +1,5 @@
 /* routes/home.js */
+// 홈페이지 메인화면용 라우터
 
 var express = require("express");
 var router  = express.Router();
