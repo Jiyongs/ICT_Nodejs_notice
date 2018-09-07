@@ -21,9 +21,14 @@
         <li><a href="/posts">게시판</a></li> 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/users">사용자</a></li>
-        <li><a href="/users/new">가입하기</a></li>
-      </ul>
+        <% if(isAuthenticated){ %>
+         <li><a href="/users/<%= currentUser.username %>">나의 계정</a></li>
+         <li><a href="/logout">Logout</a></li>
+        <% } else { %>
+         <li><a href="/users/new">가입하기</a></li>
+         <li><a href="/login">Login</a></li>
+        <% } %>
+       </ul>
     </div>
   </div>
 </nav>

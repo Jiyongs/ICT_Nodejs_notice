@@ -7,12 +7,18 @@
 
 /* home 스타일 */
 .home h1{
-    color:  rgb(4, 20, 63);
+    color:  rgb(17, 48, 134);
   }
+  /* login 스타일 */
+  .home-login{
+    max-width: 330px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+   }
 
   /* post 스타일 */
   .post h2 {
-    color: tomato;
+    color: rgb(243, 34, 86);
     text-align: center;
    }
    .post .post-body{
@@ -21,3 +27,38 @@
    .post .posts .date{
     width: 100px;
    }
+
+/* user 스타일 */
+.user {
+  max-width: 320px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+ }
+ .user-index ul{
+  margin: 0;
+  padding: 3px 12px;
+ }
+ .user-index ul:after {
+  content: "";
+  display: block;
+  clear: both;
+ }
+ .user-index ul li{
+  display: inline-block;
+  list-style-type: none;
+ }
+ .user-index ul li a{
+  display: inline-block;
+  text-decoration:none;
+  margin: 3px;
+  background-color: #eee;
+  padding: 3px 10px;
+  border-radius: 3px;
+ }
+ .user-index ul li a:hover{
+  background-color: #ccc;
+ }
+ .user-edit hr{
+  margin-top: 5px;
+  margin-bottom: 11px;
+ }
