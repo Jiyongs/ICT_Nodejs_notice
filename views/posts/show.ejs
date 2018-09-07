@@ -1,0 +1,44 @@
+<!-- views/posts/show.ejs -->
+<!-- 글 클릭 시(조회) 화면 구성 -->
+
+<!-- 부트스트랩의 row와 col-class로 grid를 구성 : post-body와 post-info를 화면 크기에 따라 배치되게 함 -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <% include ../partials/head %>
+ </head>
+ <body>
+  <% include ../partials/nav %>
+
+  <div class="container post post-show">
+   <% include ./partials/header %>
+
+   <div class="buttons">
+    <a class="btn btn-default" href="/posts">Back</a>
+    <a class="btn btn-default" href="/posts/<%= post._id %>/edit">수정</a>
+    <form action="/posts/<%= post._id %>?_method=delete" method="post">
+     <a class="btn btn-default" href="#" onclick="confirm('정말 삭제하시겠습니까?')?this.parentElement.submit():null;">삭제</a>
+    </form>
+   </div>
+
+   <div class="contentBox">
+    <h3 class="contentBoxTop"><%= post.title %></h3>
+    <div class="row">
+     <div class="col-sm-4 col-sm-push-8">
+      <div class="post-info">
+       <div><span>Created</span> : <%= post.createdDate %> <%= post.createdTime %></div>
+       <% if(post.updatedAt) { %>
+        <div><span>Updated</span> : <%= post.updatedDate %> <%= post.updatedTime %></div>
+       <% } %>
+      </div> <!-- post-info end -->
+     </div> <!-- col end-->
+     <div class="col-sm-8 col-sm-pull-4">
+      <div class="post-body"><%= post.body %></div>
+     </div> <!-- col end-->
+    </div> <!-- row end -->
+   </div> <!-- post-container end -->
+
+  </div> <!-- container end -->
+ </body>
+</html>
