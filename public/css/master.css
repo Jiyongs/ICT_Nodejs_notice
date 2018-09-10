@@ -5,6 +5,15 @@
   display: inline-block;
  }
 
+ /* text길이>width길이 인 경우 ...로 처리함 */
+.ellipsis{
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+
 /* home 스타일 */
 .home h1{
     color:  rgb(17, 48, 134);
@@ -22,11 +31,21 @@
     text-align: center;
    }
    .post .post-body{
-    white-space: pre-line; /* 1 */
+    white-space: pre-line;
    }
    .post .posts .date{
     width: 100px;
    }
+   .post .posts .author{
+    text-align: center;
+    width: 80px;
+   }
+   .post-index .posts{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    table-layout: fixed;
+   }
+
 
 /* user 스타일 */
 .user {

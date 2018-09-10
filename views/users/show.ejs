@@ -13,8 +13,10 @@
 
    <div class="buttons">
     <a class="btn btn-default" href="/users">Back</a>
+    <% if(isAuthenticated && currentUser.id == user.id) { %>  <!-- 로그인 && 조회 회원정보id==로그인id 인 경우만 정보 수정 버튼 보임 -->
     <a class="btn btn-default" href="/users/<%= user.username %>/edit">수정</a>
-   </div>
+    <% } %>
+    </div>
 
    <form class="user-form form-horizontal" action="/users" method="post">
     <div class="contentBox">
