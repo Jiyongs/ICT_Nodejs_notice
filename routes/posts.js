@@ -24,10 +24,10 @@ router.get("/new", util.isLoggedin, function(req, res){
     res.render("posts/new",{post:post, errors:errors});
 });
 
-// create
+// create (글 작성)
 router.post("/", util.isLoggedin, function(req, res){
     req.body.author = req.user._id; // 글 작성시 req.user._id(passport.js에서 자동 생성되는 것)를 가져와 post의 author에 기록함
-    Post.create(req.body, function(err, post){
+    Post.create(req.body, function(err, post){ //posts DB Table 생성
      if(err){
          req.flash("post", req.body);
          req.flash("errors", util.parseError(err));

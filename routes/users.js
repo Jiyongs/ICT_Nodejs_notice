@@ -25,7 +25,7 @@ var util = require("../util");
    
    // create (회원가입)
    router.post("/", function(req, res){
-    User.create(req.body, function(err, user){
+    User.create(req.body, function(err, user){ //user DB Table 생성
      if(err) {
          req.flash("user", req.body);
          req.flash("errors", util.parseError(err));

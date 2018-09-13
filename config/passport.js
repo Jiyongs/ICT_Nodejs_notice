@@ -1,4 +1,5 @@
 /* config/passport.js */
+// 로그인 기능
 
 var passport   = require("passport");
 var LocalStrategy = require("passport-local").Strategy;

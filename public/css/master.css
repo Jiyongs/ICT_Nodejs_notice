@@ -26,8 +26,8 @@
    }
 
   /* post 스타일 */
-  .post h2 {
-    color: rgb(243, 34, 86);
+  .post h1 {
+    color: rgb(17, 48, 134);
     text-align: center;
    }
    .post .post-body{
